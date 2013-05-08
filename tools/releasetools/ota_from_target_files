@@ -418,9 +418,35 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
-  script.Print(" ..........    .AXI0M IS REBORN......    ...");
-  script.Print(".............       ..   ......... .. ......");
-  script.Print("*********A DROIDTH3ORY HACK PRODUCTION******");
+
+  script.Print(" ..........  AXI0M IS REBORN......   ...");
+  script.Print("MMMMMMMMMMMMM8=~MMMMMMMMM7Z=DD+MMMMMMMMM");
+  script.Print("MMMMMMMMMMMM+~IZ.=MDDNM8.. :. OMMMMMMMMM");
+  script.Print("MMMMMMMMMMMM7~:I=,~:..,.,,,.. $MMMMMMMMM");
+  script.Print("MMMMMMMMMMMI~~=::,,,.,,.......ONMMMMMMMM");
+  script.Print("MMMMMMMMM==:=8=?:=.~ =Z=~...,.$DMMMMMMMM");
+  script.Print("MMMMMMN88=$~M,. .....,.=MMN,,,:,NMMMMMMM");
+  script.Print("MMDZ:?I?:~MD.  ..,.,.,,.IMMM7..,~NMMMMMM");
+  script.Print("MM8OI+~=+$MZ.,  ..,.,. =:NMMM8,+++.==MMM");
+  script.Print("MM7??7++$MN :.. ...:~,,,~MMMMM$~:?~I?OMM");
+  script.Print("MMM$,?I7OM=:..~:. :,IMMN?7MMMMM:?=I?,DMM");
+  script.Print("MMMM~?~~MMD~?IMMM,,~MMMM=7MMMMM?.~~ZMMMM");
+  script.Print("MMMM+.+~MMMZ,,MMM.8N ~==,,DMMMM?~,,MMMMM");
+  script.Print("MMMM8~+,NMMN:D~+=:M7M=,=+NDMMMM+~=~MMMMM");
+  script.Print("MMM??I:~ZMMM?:,~=,..?+$:INMMMMM~+7+MMMMM");
+  script.Print("MNI++:=::NMMMDDN8,ZN8MOMN$MMMM~=7I,$MMMM");
+  script.Print("MN+Z~::.,,ZMMMM~M+O$MDO+~MMMM7,~==7ZDMMM");
+  script.Print("MN ,,  , :,ZMMMM,=.=$==~?MMD?+7:~+$DMMMM");
+  script.Print("MMMDO88$~,,.~DMMMZ=.,.?MMM+===Z,ZNMMMMMM");
+  script.Print("MMMMMMN88+.,,,.=ZO8OD$7+:,=,:7MMMMMMMMMM");
+  script.Print("MMMMMMMNN?:::,,+7=.~:,:::~+=MMMMMMMMMMMM");
+  script.Print("MMMMMMMMM. , ..,,,:,~=~~=?+ZMMMMMMMMMMMM");
+  script.Print("MMMMMMMMMO....:DMMMMD: ~ZZOMMMMMMMMMMMMM");
+  script.Print("MMMMMMMMMMM8.M+MNMMMMM$DMMMMMMMMMMMMMMMM");
+  script.Print("MMMMMMMMMMMMIOMMMMMMMMMMMMMMMMMMMMMMMMMM");
+  script.Print("MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM");
+  script.Print(".............    ..   ......... .. .....");
+  script.Print("******A DROIDTH3ORY HACK PRODUCTION*****");
 
   script.Print("Wiping Old Shit")
 
