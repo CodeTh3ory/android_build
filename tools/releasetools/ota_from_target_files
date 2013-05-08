@@ -418,19 +418,9 @@ def WriteFullOTAPackage(input_zip, output_zip):
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
 
-  script.Print("***********************************************************");
-  script.Print("***********************************************************");
-  script.Print("...+NNMMDMM+   MZMMMMMM  ...MMMMMMM.. ..MMMMMMM MMM...MMMO.");
-  script.Print(".~8DNN$=$MMM.OMNN NMMMMM:...MMM?MMMMM...NMMNNNM.,MMZ.~MMM..");
-  script.Print(",NDN........MMMMM  MM. .MM .MMM.:..MMD..NDM  ....DNM:Z?M...");
-  script.Print("MMM ........MMMMI. .  .MMMZ.MMM...  MM$.8DMMMMM...MMNM:....");
-  script.Print("MMM$ .......M.   . 8. OMMM8.MMM.....MMM.MNMMMMM.. NMM.M....");
-  script.Print("MMM.:.......DDOD8IMI... IM..MMM... MMM..DMM...... MMM.O7...");
-  script.Print(".MMMM ....M..MNN88  MMMMMI..MMM..?MMM7 .MMM O .. MMM.MMD ..");
-  script.Print("..=MMMMMMMMM, DMNN MMMNM....MMMMMMMM. ..MMMMMMM.MMM...MMM .");
-  script.Print(" .. ..OMO ...   :~MM7.  ....=:==. ......MMMMMMMMMM,... MMM.");
-  script.Print(".............       ..   ......... .. ... .   .............");
-  script.Print("***************A DROIDTH3ORY HACK PRODUCTION***************");
+  script.Print(" ..........    .AXI0M IS REBORN......    ...");
+  script.Print(".............       ..   ......... .. ......");
+  script.Print("*********A DROIDTH3ORY HACK PRODUCTION******");
 
   script.Print("Wiping Old Shit")
 
@@ -441,7 +431,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.Print("Mounting This Bitch")
   script.Mount("/system")
   script.ShowProgress(0.5, 40)
-  script.Print("Installing CODEX")
+  script.Print("Installing AXI0M")
   script.UnpackPackageDir("system", "/system")
   script.Print("Setting Symlinks And Permissions") 
 
@@ -466,7 +456,7 @@ def WriteFullOTAPackage(input_zip, output_zip):
   script.WriteRawImage("/boot", "boot.img")
 
   script.ShowProgress(0.1, 0)
-  script.Print("CODEX Has Been Installed")
+  script.Print("AXI0M Has Been Installed")
   device_specific.FullOTA_InstallEnd()
 
   if OPTIONS.extra_script is not None:

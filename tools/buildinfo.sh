@@ -42,6 +42,6 @@ echo "ro.build.description=$PRIVATE_BUILD_DESC"
 echo "ro.build.fingerprint=$BUILD_FINGERPRINT"
 echo "ro.build.characteristics=$TARGET_AAPT_CHARACTERISTICS"
 
-echo "ro.codex.device=$CODEX_DEVICE"
+echo "ro.axi0m.device=$AXI0M_DEVICE"
 
 echo "# end build properties"

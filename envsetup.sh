@@ -60,12 +60,12 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^codex_") ; then
-       CODEX_BUILD=$(echo -n $1 | sed -e 's/^codex_//g')
+    if (echo -n $1 | grep -q -e "^axi0m_") ; then
+       AXI0M_BUILD=$(echo -n $1 | sed -e 's/^axi0m_//g')
     else
-       CODEX_BUILD=
+       AXI0M_BUILD=
     fi
-    export CODEX_BUILD
+    export AXI0M_BUILD
 
     CALLED_FROM_SETUP=true BUILD_SYSTEM=build/core \
         TARGET_PRODUCT=$1 \
@@ -455,7 +455,7 @@ function print_lunch_menu()
     echo
     echo "You're building on" $uname
     echo
-    if [ "z${CODEX_DEVICES_ONLY}" != "z" ]; then
+    if [ "z${AXI0M_DEVICES_ONLY}" != "z" ]; then
        echo "Breakfast menu... pick a combo:"
     else
        echo "Lunch menu... pick a combo:"
@@ -469,7 +469,7 @@ function print_lunch_menu()
         i=$(($i+1))
     done
 
-    if [ "z${CODEX_DEVICES_ONLY}" != "z" ]; then
+    if [ "z${AXI0M_DEVICES_ONLY}" != "z" ]; then
        echo "... and don't forget the bacon!"
     fi
 
@@ -480,7 +480,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
-        mka codex
+        mka axi0m
     else
         echo "No such item in brunch menu. Try 'breakfast'"
         return 1
@@ -491,10 +491,10 @@ function brunch()
 function breakfast()
 {
     target=$1
-    CODEX_DEVICES_ONLY="true"
+    AXI0M_DEVICES_ONLY="true"
     unset LUNCH_MENU_CHOICES
     add_lunch_combo full-eng
-    for f in `/bin/ls vendor/codex/vendorsetup.sh 2> /dev/null`
+    for f in `/bin/ls vendor/axi0m/vendorsetup.sh 2> /dev/null`
         do
             echo "including $f"
             . $f
@@ -510,8 +510,8 @@ function breakfast()
             # A buildtype was specified, assume a full device name
             lunch $target
         else
-            # This is probably just the CODEX model name
-            lunch codex_$target-userdebug
+            # This is probably just the AXI0M model name
+            lunch axi0m_$target-userdebug
         fi
     fi
     return $?
@@ -646,8 +646,8 @@ function tapas()
 function eat()
 {
     if [ "$OUT" ] ; then
-        MODVERSION=`sed -n -e'/ro\.codex\.version/s/.*=//p' $OUT/system/build.prop`
-        ZIPFILE=codex-$MODVERSION.zip
+        MODVERSION=`sed -n -e'/ro\.axi0m\.version/s/.*=//p' $OUT/system/build.prop`
+        ZIPFILE=axi0m-$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
@@ -662,7 +662,7 @@ function eat()
             done
             echo "Device Found.."
         fi
-    if (adb shell cat /system/build.prop | grep -q "ro.codex.device=$CODEX_BUILD");
+    if (adb shell cat /system/build.prop | grep -q "ro.axi0m.device=$AXI0M_BUILD");
     then
         # if adbd isn't root we can't write to /cache/recovery/
         adb root
@@ -687,7 +687,7 @@ EOF
     fi
     return $?
     else
-        echo "The connected device does not appear to be $CODEX_BUILD, burn it!"
+        echo "The connected device does not appear to be $AXI0M_BUILD, burn it!"
     fi
 }
 
@@ -1264,7 +1264,7 @@ function lska() {
     if [ ! -z "$1" ]; then
         for i in "$@"; do
             case $i in
-                codex|otapackage|systemimage)
+                axi0m|otapackage|systemimage)
                     mka installclean
                     mka $i
                     ;;
