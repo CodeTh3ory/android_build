@@ -185,16 +185,16 @@ ifneq ($(strip $(TARGET_BUILD_APPS)),)
 all_product_configs := $(call get-product-makefiles,\
     $(SRC_TARGET_DIR)/product/AndroidProducts.mk)
 else
-  ifneq ($(CODEX_BUILD),)
-    all_product_configs := $(shell ls device/*/$(CODEX_BUILD)/codex.mk)
+  ifneq ($(AXI0M_BUILD),)
+    all_product_configs := $(shell ls device/*/$(AXI0M_BUILD)/axi0m.mk)
   else
     # Read in all of the product definitions specified by the AndroidProducts.mk
     # files in the tree.
     all_product_configs := $(get-all-product-makefiles)
-  endif # CODEX_BUILD
+  endif # AXI0M_BUILD
 endif
 
-ifeq ($(CODEX_BUILD),)
+ifeq ($(AXI0M_BUILD),)
 # Find the product config makefile for the current product.
 # all_product_configs consists items like:
 # <product_name>:<path_to_the_product_makefile>
