@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
     BasicDreams \
     Browser \
     Contacts \
+    MusicFX \
     ContactsProvider \
     DefaultContainerService \
     DownloadProvider \
