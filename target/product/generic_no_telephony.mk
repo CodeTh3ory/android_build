@@ -32,7 +32,6 @@ PRODUCT_PACKAGES := \
     FusedLocation \
     Gallery2 \
     InputDevices \
-    Music \
     MusicFX \
     Phone \
     Settings \

@@ -21,7 +21,8 @@
 
 PRODUCT_PACKAGES := \
     libfwdlockengine \
-    WAPPushManager
+    WAPPushManager \
+    MusicFX
 
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
