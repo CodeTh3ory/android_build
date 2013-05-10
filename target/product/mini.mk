@@ -55,6 +55,7 @@ PRODUCT_PACKAGES += \
     DownloadProvider \
     DownloadProviderUi \
     MediaProvider \
+    MusicFX \
     PackageInstaller \
     SettingsProvider \
     TelephonyProvider \
