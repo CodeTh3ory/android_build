@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
     Browser \
     Contacts \
     MusicFX \
+    Music \
     ContactsProvider \
     DefaultContainerService \
     DownloadProvider \
